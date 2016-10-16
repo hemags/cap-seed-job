@@ -23,4 +23,26 @@ freeStyleJob('engine') {
     steps {
       shell("mvn clean install")
     }
+    
+    publishers {
+        slackNotifier {
+            room("#random")
+            notifyAborted(true)
+            notifyFailure(true)
+            notifyNotBuilt(true)
+            notifyUnstable(true)
+            notifyBackToNormal(true)
+            notifySuccess(false)
+            notifyRepeatedFailure(false)
+            startNotification(false)
+            includeTestSummary(false)
+            includeCustomMessage(false)
+            customMessage(null)
+            buildServerUrl(null)
+            sendAs(null)
+            commitInfoChoice('NONE')
+            teamDomain("capmiddleware")
+            authToken("EmYzmtnkDYQ6rLFmmXahIm0n")
+        }
+    }
 }
