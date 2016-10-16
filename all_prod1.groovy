@@ -42,7 +42,7 @@ freeStyleJob('engine') {
             sendAs(null)
             commitInfoChoice('NONE')
             teamDomain("capmiddleware")
-            authToken("EmYzmtnkDYQ6rLFmmXahIm0n")
+            authToken()
         }
     }
 }
