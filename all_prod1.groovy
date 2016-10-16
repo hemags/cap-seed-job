@@ -39,7 +39,6 @@ freeStyleJob('engine') {
 
     steps {
         gradle 'build'
-        // gradle 'integrationTest publishIntegrationTestResult'
         // shell("scp -r build/reports/tests/ ubuntu@10.63.170.185:Images/digital-item/integration-test/")
         // shell("scp -r build/distributions/prod1-master-0.1-ALPHA.zip ubuntu@10.63.170.185:~ubuntu/Images/prod1/engine/")
     }
